@@ -1,16 +1,26 @@
 import React from "react";
-import Header from "./Header";
-import NotFound from "./NotFound";
+import {Switch, Route} from "react-router-dom"
+import Header from "./Common/Header";
+import NotFound from "./Common/NotFound";
 
 function Layout() {
   return (
-    <>
+    <React.Fragment>
       <Header />
       <div className="container">
-        {/* TODO: Implement the screen starting here */}
-        <NotFound />
+        <Switch>
+          <Route exact={true} path="/">
+            <Home />
+          </Route>
+          <Route path="/">
+            <Study />
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
       </div>
-    </>
+    </React.Fragment>
   );
 }
 
