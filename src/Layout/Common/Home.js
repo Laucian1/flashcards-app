@@ -1,27 +1,19 @@
-import React, { useEffect, useState } from "react"
-import {Switch, Route} from "react-router-dom"
-import {listDecks} from "../../utils/api/index"
+import React from "react"
+import { Link } from "react-router-dom"
+import DeckList from "./DeckList"
 
 function Home() {
-    const [decks, setDecks] = useState([])
-    const [error, setError] = useState(undefined)
-
-    useEffect(() => {
-        const abortController = new AbortController()
-
-        listDecks(abortController.signal).then(setDecks).catch(setError)
-
-        return () => abortController.abort()
-    }, [])
-    
-    /*if (error) {
-        To be updated
-        return <p>Error: {error}</p>
-    }
-
-    const list = decks.map((deck) => <p>`${deck.name}</p>)
-
-    return {list}*/
+    return (
+        <React.Fragment>
+            <Link to="/decks/new"
+            className="btn btn-secondary"
+            type="button">
+                <span className="oi oi-plus mr-1"></span>
+                Create Deck
+            </Link>
+            <DeckList />
+        </React.Fragment>
+    )
 }
 
 export default Home
