@@ -46,7 +46,7 @@ function Deck() {
                         </div>
                         <div>
                             <Link to={`/decks/${deck.id}/cards/${card.id}/edit`} className="btn btn-secondary m-1">
-                                <span className="oi oi-pencil m1-1 float-right"></span>
+                                <span className="oi oi-pencil mr-1 float-left"></span>
                                 Edit
                             </Link>
                             <CardDelete cardId={card.id} deckId={deck.id} />
