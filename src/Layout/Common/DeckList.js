@@ -13,7 +13,7 @@ function DeckList() {
         listDecks(abortController.signal).then(setDecks).catch(setError)
 
         return () => abortController.abort(error)
-    }, [])
+    }, [error])
 
     const list = decks.map((deck) => {
         let cardCount = deck.cards.length

@@ -28,7 +28,7 @@ function CreateDeck() {
                             Home
                         </Link>
                     </li>
-                    <li className="breacrumb-item active" aria-current="page">Create Deck</li>
+                    <li className="breadcrumb-item active" aria-current="page">Create Deck</li>
                 </ol>
             </nav>
             <h3>Create Deck</h3>
