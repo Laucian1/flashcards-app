@@ -28,7 +28,7 @@ function CardList({deck, cardCount, cards}) {
             setIndex(index + 1)
             setFlipped(true)
         } else {
-            const restartPrompt = window.confirm("Restart? Click 'Cancel' to return to the home page.")
+            const restartPrompt = window.confirm("Restart cards?\n\nClick 'Cancel' to return to the home page.")
             if (restartPrompt) {
                 setIndex(0)
                 setFlipped(true)

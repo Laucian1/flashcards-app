@@ -40,6 +40,7 @@ function CreateDeck() {
                         className="form-control"
                         id="name"
                         required
+                        placeholder="Deck Name"
                         onChange={handleNameChange}
                         value={name}
                     />
@@ -52,6 +53,7 @@ function CreateDeck() {
                         id="description"
                         rows="3"
                         required
+                        placeholder="Brief description of the deck"
                         onChange={handleDescChange}
                         value={desc}
                     />

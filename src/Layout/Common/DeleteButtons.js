@@ -6,7 +6,7 @@ export function DeckDelete({deckId}) {
     const history = useHistory()
 
     function handleDeckDelete() {
-        const deleteDeckPrompt = window.confirm("Delete this deck? You will not be able to recover it.")
+        const deleteDeckPrompt = window.confirm("Delete this deck?\n\nYou will not be able to recover it.")
 
         if(deleteDeckPrompt) {
             deleteDeck(deckId)
@@ -24,7 +24,7 @@ export function DeckDelete({deckId}) {
 
 export function CardDelete({cardId, deckId}) {
     function handleCardDelete() {
-        const deleteCardPrompt = window.confirm("Delete this card? You will not be able to recover it.")
+        const deleteCardPrompt = window.confirm("Delete this card?\n\nYou will not be able to recover it.")
 
         if(deleteCardPrompt) {
             deleteCard(cardId)
@@ -33,7 +33,7 @@ export function CardDelete({cardId, deckId}) {
     }
 
     return (
-        <button className="btn btn-danger float-right" onClick={handleCardDelete}>
+        <button className="btn btn-danger float-right mr-2" onClick={handleCardDelete}>
             <span className="oi oi-trash"></span>
         </button>
     )

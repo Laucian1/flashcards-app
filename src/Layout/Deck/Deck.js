@@ -77,7 +77,11 @@ function Deck() {
                 <p>{deck.description}</p>
             </div>
             <div className="buttons">
-                <Link to={`/decks/${deck.id}/edit`} className="btn btn-primary mx-1">
+                <Link to={`/decks/${deck.id}/edit`} className="btn btn-secondary mx-1">
+                    <span className="oi oi-pencil mr-1"></span>
+                    Edit
+                </Link>
+                <Link to={`/decks/${deck.id}/study`} className="btn btn-primary mx-1">
                     <span className="oi oi-book mr-1"></span>
                     Study
                 </Link>

@@ -28,10 +28,6 @@ function DeckList() {
                     <p>{deck.description}</p>
                 </div>
                 <div>
-                    <Link to={`/decks/${deck.id}/edit`} className="btn btn-secondary m-1">
-                        <span className="oi oi-pencil mr-1 float-left"></span>
-                        Edit
-                    </Link>
                     <Link to={`/decks/${deck.id}`} className="btn btn-secondary mx-1">
                         <span className="oi oi-eye mx-1"></span>
                         View

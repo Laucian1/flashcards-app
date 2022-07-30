@@ -60,7 +60,7 @@ function EditCard() {
             ...chosenCard,
             front: front,
             back: back,
-        }).then((updatedCard) => history.push(`/deck/${deck.id}`))
+        }).then((updatedCard) => history.push(`/decks/${deck.id}`))
     }
 
     return (
